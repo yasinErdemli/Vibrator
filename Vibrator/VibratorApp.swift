@@ -11,7 +11,10 @@ import SwiftUI
 struct VibratorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //            ContentView()
+            //                .environmentObject(envObject)
+            //        }
+            TabBarView(tabSelection: .home)
         }
     }
 }

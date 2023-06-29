@@ -7,18 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D08460D2A4E149100B3BCE9 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D08460C2A4E149100B3BCE9 /* PreferencesView.swift */; };
+		7D54AFFD2A4B5B900032D200 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D54AFF82A4B5B8F0032D200 /* TabBarItem.swift */; };
+		7D54AFFE2A4B5B900032D200 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D54AFF92A4B5B8F0032D200 /* CustomTabBarView.swift */; };
+		7D54AFFF2A4B5B900032D200 /* TabBarPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D54AFFA2A4B5B8F0032D200 /* TabBarPreferenceKey.swift */; };
+		7D54B0002A4B5B900032D200 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D54AFFB2A4B5B8F0032D200 /* TabBarView.swift */; };
+		7D54B0012A4B5B900032D200 /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D54AFFC2A4B5B8F0032D200 /* CustomTabBarContainerView.swift */; };
+		7D54B0032A4B6FB50032D200 /* WaveAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D54B0022A4B6FB50032D200 /* WaveAnimation.swift */; };
 		7DD679F52A44847C00FE714C /* VibratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD679F42A44847C00FE714C /* VibratorApp.swift */; };
 		7DD679F72A44847C00FE714C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD679F62A44847C00FE714C /* ContentView.swift */; };
 		7DD679F92A44847E00FE714C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DD679F82A44847E00FE714C /* Assets.xcassets */; };
 		7DD679FC2A44847E00FE714C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DD679FB2A44847E00FE714C /* Preview Assets.xcassets */; };
+		7DD67A052A4484CB00FE714C /* CoreHaptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD67A042A4484CB00FE714C /* CoreHaptics.swift */; };
+		7DD67A072A450EC200FE714C /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD67A062A450EC200FE714C /* PurchaseView.swift */; };
+		7DD67A0B2A45272500FE714C /* ShimmerEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD67A0A2A45272500FE714C /* ShimmerEffect.swift */; };
+		7DF39AE72A453A7800DAF1E0 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF39AE62A453A7800DAF1E0 /* MainTabView.swift */; };
+		7DF39AE92A453CC400DAF1E0 /* VibrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF39AE82A453CC400DAF1E0 /* VibrationView.swift */; };
+		7DF39AEF2A454B8F00DAF1E0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF39AEE2A454B8F00DAF1E0 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D08460C2A4E149100B3BCE9 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		7D54AFF82A4B5B8F0032D200 /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		7D54AFF92A4B5B8F0032D200 /* CustomTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		7D54AFFA2A4B5B8F0032D200 /* TabBarPreferenceKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarPreferenceKey.swift; sourceTree = "<group>"; };
+		7D54AFFB2A4B5B8F0032D200 /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		7D54AFFC2A4B5B8F0032D200 /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
+		7D54B0022A4B6FB50032D200 /* WaveAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveAnimation.swift; sourceTree = "<group>"; };
 		7DD679F12A44847C00FE714C /* Vibrator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vibrator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD679F42A44847C00FE714C /* VibratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibratorApp.swift; sourceTree = "<group>"; };
 		7DD679F62A44847C00FE714C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7DD679F82A44847E00FE714C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DD679FB2A44847E00FE714C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7DD67A042A4484CB00FE714C /* CoreHaptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreHaptics.swift; sourceTree = "<group>"; };
+		7DD67A062A450EC200FE714C /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
+		7DD67A0A2A45272500FE714C /* ShimmerEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffect.swift; sourceTree = "<group>"; };
+		7DF39AE62A453A7800DAF1E0 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		7DF39AE82A453CC400DAF1E0 /* VibrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationView.swift; sourceTree = "<group>"; };
+		7DF39AEE2A454B8F00DAF1E0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +58,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D54AFF72A4B5B8F0032D200 /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				7D54AFF82A4B5B8F0032D200 /* TabBarItem.swift */,
+				7D54AFF92A4B5B8F0032D200 /* CustomTabBarView.swift */,
+				7D54AFFA2A4B5B8F0032D200 /* TabBarPreferenceKey.swift */,
+				7D54AFFB2A4B5B8F0032D200 /* TabBarView.swift */,
+				7D54AFFC2A4B5B8F0032D200 /* CustomTabBarContainerView.swift */,
+			);
+			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
 		7DD679E82A44847C00FE714C = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +91,14 @@
 			children = (
 				7DD679F42A44847C00FE714C /* VibratorApp.swift */,
 				7DD679F62A44847C00FE714C /* ContentView.swift */,
+				7DF39AE62A453A7800DAF1E0 /* MainTabView.swift */,
+				7DD67A062A450EC200FE714C /* PurchaseView.swift */,
+				7DF39AEE2A454B8F00DAF1E0 /* HomeView.swift */,
+				7DF39AE82A453CC400DAF1E0 /* VibrationView.swift */,
+				7D08460C2A4E149100B3BCE9 /* PreferencesView.swift */,
+				7DF39AEC2A454B4A00DAF1E0 /* HelperViews */,
+				7DF39AED2A454B5F00DAF1E0 /* Utilities */,
+				7D54AFF72A4B5B8F0032D200 /* CustomTabBar */,
 				7DD679F82A44847E00FE714C /* Assets.xcassets */,
 				7DD679FA2A44847E00FE714C /* Preview Content */,
 			);
@@ -65,6 +111,23 @@
 				7DD679FB2A44847E00FE714C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7DF39AEC2A454B4A00DAF1E0 /* HelperViews */ = {
+			isa = PBXGroup;
+			children = (
+				7D54B0022A4B6FB50032D200 /* WaveAnimation.swift */,
+				7DD67A0A2A45272500FE714C /* ShimmerEffect.swift */,
+			);
+			path = HelperViews;
+			sourceTree = "<group>";
+		};
+		7DF39AED2A454B5F00DAF1E0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7DD67A042A4484CB00FE714C /* CoreHaptics.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +200,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D54AFFF2A4B5B900032D200 /* TabBarPreferenceKey.swift in Sources */,
+				7D54B0002A4B5B900032D200 /* TabBarView.swift in Sources */,
+				7DF39AEF2A454B8F00DAF1E0 /* HomeView.swift in Sources */,
+				7D54B0012A4B5B900032D200 /* CustomTabBarContainerView.swift in Sources */,
+				7DD67A052A4484CB00FE714C /* CoreHaptics.swift in Sources */,
+				7D54AFFE2A4B5B900032D200 /* CustomTabBarView.swift in Sources */,
 				7DD679F72A44847C00FE714C /* ContentView.swift in Sources */,
+				7D54AFFD2A4B5B900032D200 /* TabBarItem.swift in Sources */,
+				7DD67A072A450EC200FE714C /* PurchaseView.swift in Sources */,
+				7D54B0032A4B6FB50032D200 /* WaveAnimation.swift in Sources */,
+				7D08460D2A4E149100B3BCE9 /* PreferencesView.swift in Sources */,
+				7DF39AE72A453A7800DAF1E0 /* MainTabView.swift in Sources */,
+				7DD67A0B2A45272500FE714C /* ShimmerEffect.swift in Sources */,
 				7DD679F52A44847C00FE714C /* VibratorApp.swift in Sources */,
+				7DF39AE92A453CC400DAF1E0 /* VibrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
