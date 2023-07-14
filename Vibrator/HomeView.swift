@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var showSheet: Bool = false
     var body: some View {
         ZStack {
 //            BackgroundView().ignoresSafeArea()
@@ -21,83 +22,105 @@ struct HomeView: View {
                 
                 Spacer()
                 
-                VStack {
-                    Group {
-                        ListItem(text: "Share Us", image: Image(systemName: "paperplane"))
+                VStack(spacing: 20) {
+                        ListItem(text: "Share Us", image: Image(systemName: "square.and.arrow.up"))
                         ListItem(text: "Rate Us", image: Image(systemName: "star"))
-                        ListItem(text: "Contact Us", image: Image(systemName: "ellipsis.bubble"))
+                        ListItem(text: "Contact Us", image: Image(systemName: "bubble.left"))
                         ListItem(text: "Restore Purchases", image: Image(systemName: "cube.box"))
-                        ListItem(text: "Help", image: Image("Call").resizable())
+                        ListItem(text: "Help", image: Image(systemName: "questionmark.circle"))
+                    HStack(spacing: 20) {
+                        
+                        Button {
+                            
+                        } label: {
+                            ListItemSmall(text: "Privacy Policy", image: Image(systemName: "shield.righthalf.filled"))
+                            
+                        }
+                        Spacer()
+                        Button {
+                            
+                        } label: {
+                            ListItemSmall(text: "Terms & Conditions", image: Image(systemName: "doc.append"))
+                        }
+                        
                     }
-                    .padding()
                 }
-                .padding()
-                .background(.thinMaterial.opacity(0.8))
                 .cornerRadius(10)
                 Spacer()
                 Button {
-                    
+                    showSheet.toggle()
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
-                            .stroke(lineWidth: 2)
-                            .fill(Color("Orange"))
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 55)
-                        
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(.ultraThinMaterial.opacity(0.5))
-                            .frame(height: 53)
-                            
-                        
+                            .foregroundStyle(LinearGradient(colors: [Color(hue: 25/360, saturation: 1, brightness: 1), Color(hue: 302/360, saturation: 0.8, brightness: 0.6)], startPoint: .topLeading, endPoint: .bottomTrailing))
+                            .frame(height: 57)
                         Text("Open All Features")
                             .font(.headline)
                             .foregroundColor(.white)
-                            
                     }
                 }
                 Spacer()
-                HStack {
-                    Spacer()
-                    Button {
-                        
-                    } label: {
-                        Text("Privacy Policy")
-                            .fontWeight(.thin)
-                            .opacity(0.52)
-                    }
-                    Spacer()
-                    Button {
-                        
-                    } label: {
-                        Text("Terms & Conditions")
-                            .fontWeight(.thin)
-                            .opacity(0.52)
-                    }
-                    Spacer()
-                }
-                .foregroundColor(.white)
-                .font(.caption)
+                
+                
 
             }
-            .padding(40)
-            .padding(.bottom, 70)
-            .padding(.horizontal, 20)
+            .padding()
+            
+            
+        }
+        .fullScreenCover(isPresented: $showSheet) {
+            PurchaseView(showView: $showSheet)
+                .presentationBackground(.thinMaterial.opacity(0.5))
         }
     }
     @ViewBuilder func ListItem(text: String, image: Image) -> some View {
-        HStack {
-            Text(text)
-                .font(.title3)
-                .fontWeight(.regular)
-                .opacity(0.6)
+        ZStack {
+            RoundedRectangle(cornerRadius: 10)
+                .foregroundStyle(Color("BackgroundColor").opacity(0.9) .shadow(.drop(color: Color("ShadowColor2").opacity(0.8), radius: 1, x: 1, y: 1)),.shadow(.drop(color: Color(hue: 247/360, saturation: 0.14, brightness: 0.68, opacity: 0.1), radius: 1, x: -1, y: -1)) )
+            HStack {
+                Text(text)
+                    .foregroundColor(.white)
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .opacity(0.6)
+                
+                Spacer()
+                
+                image
+                    .foregroundColor(.white)
+                    .frame(height: 20)
+            }
             
-            Spacer()
-            
-            image
-                .foregroundColor(Color("Orange"))
-                .frame(width: 22, height: 22)
+            .frame(maxWidth: .infinity)
+            .padding(.horizontal,22)
+
         }
+        .frame(height: 55)
+    }
+    
+    @ViewBuilder func ListItemSmall(text: String, image: Image) -> some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 10)
+                .foregroundStyle(Color("BackgroundColor").opacity(0.9) .shadow(.drop(color: Color("ShadowColor2").opacity(0.8), radius: 1, x: 1, y: 1)),.shadow(.drop(color: Color(hue: 247/360, saturation: 0.14, brightness: 0.68, opacity: 0.1), radius: 1, x: -1, y: -1)) )
+            HStack {
+                Text(text)
+                    .foregroundColor(.white)
+                    .font(.caption)
+                    .fontWeight(.semibold)
+                    .opacity(0.6)
+                
+                
+                
+                image
+                    .foregroundColor(.white)
+                    .frame(height: 12)
+            }
+            
+            .frame(maxWidth: .infinity)
+            .padding(.horizontal,10)
+
+        }
+        .frame(height: 55)
     }
 }
 

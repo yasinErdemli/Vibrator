@@ -14,7 +14,8 @@ struct VibratorApp: App {
             //            ContentView()
             //                .environmentObject(envObject)
             //        }
-            TabBarView(tabSelection: .home)
+            TabBarView(tabSelection: .vibration)
+                .preferredColorScheme(.dark)
         }
     }
 }

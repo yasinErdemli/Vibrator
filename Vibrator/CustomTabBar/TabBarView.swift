@@ -21,39 +21,3 @@ struct TabBarView_Previews: PreviewProvider {
     }
 }
 
-extension TabBarView {
-    private var defaultTabView: some View {
-        TabView(selection: $selection) {
-            Color.red
-                .tabItem {
-                    Image("tabDaily")
-                    Text("Daily")
-                }
-            
-            Color.blue
-                .tabItem {
-                    Image("tabTarot")
-                    Text("Tarot")
-                }
-            
-            Color.orange
-                .tabItem {
-                    Image(systemName: "tabRunes")
-                    Text("Runes")
-                }
-            
-            Color.orange
-                .tabItem {
-                    Image(systemName: "tabDreams")
-                    Text("Dreams")
-                }
-            
-            Color.orange
-                .tabItem {
-                    Image(systemName: "tabJournal")
-                    Text("Journal")
-                }
-        }
-        .tabViewStyle(.automatic)
-    }
-}

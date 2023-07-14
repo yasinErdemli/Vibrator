@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D08460D2A4E149100B3BCE9 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D08460C2A4E149100B3BCE9 /* PreferencesView.swift */; };
+		7D2F91C42A4F045000641221 /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2F91C32A4F045000641221 /* CustomSliderView.swift */; };
 		7D54AFFD2A4B5B900032D200 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D54AFF82A4B5B8F0032D200 /* TabBarItem.swift */; };
 		7D54AFFE2A4B5B900032D200 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D54AFF92A4B5B8F0032D200 /* CustomTabBarView.swift */; };
 		7D54AFFF2A4B5B900032D200 /* TabBarPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D54AFFA2A4B5B8F0032D200 /* TabBarPreferenceKey.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		7D08460C2A4E149100B3BCE9 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		7D2F91C32A4F045000641221 /* CustomSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
 		7D54AFF82A4B5B8F0032D200 /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		7D54AFF92A4B5B8F0032D200 /* CustomTabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		7D54AFFA2A4B5B8F0032D200 /* TabBarPreferenceKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarPreferenceKey.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			children = (
 				7D54B0022A4B6FB50032D200 /* WaveAnimation.swift */,
 				7DD67A0A2A45272500FE714C /* ShimmerEffect.swift */,
+				7D2F91C32A4F045000641221 /* CustomSliderView.swift */,
 			);
 			path = HelperViews;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				7D54AFFD2A4B5B900032D200 /* TabBarItem.swift in Sources */,
 				7DD67A072A450EC200FE714C /* PurchaseView.swift in Sources */,
 				7D54B0032A4B6FB50032D200 /* WaveAnimation.swift in Sources */,
+				7D2F91C42A4F045000641221 /* CustomSliderView.swift in Sources */,
 				7D08460D2A4E149100B3BCE9 /* PreferencesView.swift in Sources */,
 				7DF39AE72A453A7800DAF1E0 /* MainTabView.swift in Sources */,
 				7DD67A0B2A45272500FE714C /* ShimmerEffect.swift in Sources */,
