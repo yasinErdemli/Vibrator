@@ -73,16 +73,20 @@ struct WaveBackground: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .fill(Gradient(colors: [.red, .purple, .orange, .purple, .red]))
+                .fill(Gradient(colors: [Color(hue: 294/360, saturation: 1, brightness: 1), Color(hue: 294/360, saturation: 1, brightness: 1), Color(hue: 294/360, saturation: 1, brightness: 1), Color(hue: 334/360, saturation: 0.81, brightness: 0.95), Color(hue: 22/360, saturation: 1, brightness: 1), Color(hue: 22/360, saturation: 1, brightness: 1), Color(hue: 22/360, saturation: 1, brightness: 1)  ]))
+                .offset(y: 150)
+                
                 .mask {
                     Wave(strength: 90, frequency: 13, phase: phase)
-                        .stroke(Color.purple.opacity(0.5), lineWidth: 9)
+                        .stroke(Color.purple.opacity(1), lineWidth: 12)
                 }
+                .offset(y: -150)
  
         }
-        .blur(radius: 5)
-        .offset(y: -200)
-        .scaleEffect(1.2)
+        .frame(height: 850)
+        .brightness(0.2)
+        .blur(radius: 2)
+        .scaleEffect(1.6)
         .edgesIgnoringSafeArea(.all)
         .frame(maxHeight: .infinity)
         

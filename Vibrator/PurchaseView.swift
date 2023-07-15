@@ -58,9 +58,9 @@ struct PurchaseView: View {
                                 
                             
                             RoundedRectangle(cornerRadius: 10)
-                                .foregroundStyle(Color(hue: 47/360, saturation: 0.41, brightness: 0.15, opacity: 0.9).shadow(.drop(color: .init(hue: 245/360, saturation: 0.49, brightness: 0.08, opacity: 0.59), radius: 1, x: 1, y: 1)), .shadow(.drop(color: .init(hue: 247/360, saturation: 0.14, brightness: 0.68, opacity: 0.1), radius: 1, x: -1, y: -1)))
-                                .frame(height: 50)
-                                .frame(width: 230)
+                                .foregroundStyle(Color(hue: 47/360, saturation: 0.41, brightness: 0.15, opacity: 1).shadow(.drop(color: .init(hue: 245/360, saturation: 0.49, brightness: 0.08, opacity: 0.59), radius: 1, x: 1, y: 1)), .shadow(.drop(color: .init(hue: 247/360, saturation: 0.14, brightness: 0.68, opacity: 0.1), radius: 1, x: -1, y: -1)))
+                                .frame(height: 45)
+                                .padding(5)
                             
                             
                             VStack {
@@ -76,7 +76,7 @@ struct PurchaseView: View {
                         Spacer()
                     }
                     
-                    .padding(.top, 155.36)
+                    .padding()
                     HStack {
                         Spacer()
                         VStack(alignment: .center, spacing: 3) {

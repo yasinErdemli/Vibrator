@@ -32,7 +32,7 @@ extension CustomTabBarView {
                 .resizable()
                 .scaledToFill()
                 .frame(width: 30, height: 20, alignment: .center)
-                .saturation(selection == item ? 1 : 0)
+                .foregroundStyle(selection == item ? LinearGradient(colors: [.white, Color(hue: 25/360, saturation: 1, brightness: 1), Color(hue: 302/360, saturation: 0.8, brightness: 0.6)], startPoint: .top, endPoint: .bottom) : .linearGradient(colors: [.white], startPoint: .top, endPoint: .bottom))
         }
         .padding(.vertical, 8)
         .frame(maxWidth: .infinity)
@@ -55,6 +55,7 @@ extension CustomTabBarView {
         }
         .padding(.horizontal, 15)
         .frame(height: 65)
+        .padding(.bottom)
         .background(content: {
             RoundedRectangle(cornerRadius: 30)
                 .foregroundStyle(
@@ -62,7 +63,6 @@ extension CustomTabBarView {
                         .shadow(.inner(color: .white.opacity(0.01), radius: 2, x: -3, y: -3))
                     
                 )
-                
         })
         .cornerRadius(100)
         .padding(.horizontal, 1)

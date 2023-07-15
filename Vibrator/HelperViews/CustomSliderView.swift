@@ -16,11 +16,11 @@ struct CustomSliderView: View {
         GeometryReader { gr in
             let thumbSize = gr.size.height * 0.3
             let minValue = gr.size.width * 0.015
-            let maxValue = (gr.size.width * 0.98) - thumbSize
+            let maxValue = gr.size.width * 0.98 - thumbSize - 20 // Subtract thumb size and padding
             
-            let scaleFactor = (maxValue - minValue) / (sliderRange.upperBound - sliderRange.lowerBound)
-            let lower = sliderRange.lowerBound
-            let sliderVal = (self.value - lower) * scaleFactor + minValue
+            let scaleFactor = (maxValue - minValue) / CGFloat(sliderRange.upperBound - sliderRange.lowerBound)
+            let lower = CGFloat(sliderRange.lowerBound)
+            let sliderVal = (CGFloat(value) - lower) * scaleFactor + minValue
             
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
@@ -31,12 +31,12 @@ struct CustomSliderView: View {
                     .foregroundStyle(Color(hue: 249/360, saturation: 0.45, brightness: 0.13, opacity: 0.8).gradient.shadow(.inner(color: Color(hue: 247/360, saturation: 0.49, brightness: 0.11, opacity: 1), radius: 12, x: 3, y: 3)),.shadow(.inner(color: .white.opacity(0.12), radius: 5, x: -3, y: -3)))
                     .frame(height: 23.32)
                     .padding(.horizontal, 3)
+                
                 HStack {
                     RoundedRectangle(cornerRadius: 10)
                         .foregroundStyle(LinearGradient(colors: [Color(hue: 248/360, saturation: 0.57, brightness: 0.66), Color(hue: 302/360, saturation: 0.8, brightness: 0.6)], startPoint: .top, endPoint: .bottom))
-                        .frame(width: sliderVal,height: 11)
-                    
-                        .padding(.horizontal,10)
+                        .frame(width: CGFloat(min(max(minValue, sliderVal), maxValue)), height: 11)
+                        .padding(.horizontal, 10)
                     
                     Spacer()
                 }
@@ -45,21 +45,20 @@ struct CustomSliderView: View {
                     Circle()
                         .foregroundStyle(Color(hue: 25/360, saturation: 1, brightness: 1).shadow(.drop(color: .black.opacity(0.25), radius: 1, x: 2, y: 0)) .shadow(.inner(color: Color(hue: 25/360, saturation: 0.97, brightness: 0.56, opacity: 0.54), radius: 1, x: -2, y: -2)), .shadow(.inner(color: .white.opacity(0.26), radius: 0.7, x: -2, y: -2)))
                         .frame(height: 20.72)
-                        .offset(x: sliderVal)
+                        .offset(x: CGFloat(min(max(minValue, sliderVal), maxValue)))
                         .gesture(
                             DragGesture(minimumDistance: 0)
                                 .onChanged { v in
-                                    if (abs(v.translation.width) < 0.1) {
+                                    if abs(v.translation.width) < 0.1 {
                                         self.lastCoordinateValue = sliderVal
                                     }
                                     if v.translation.width > 0 {
                                         let nextCoordinateValue = min(maxValue, self.lastCoordinateValue + v.translation.width)
-                                        self.value = ((nextCoordinateValue - minValue) / scaleFactor)  + lower
+                                        self.value = Double((nextCoordinateValue - minValue) / scaleFactor) + Double(lower)
                                     } else {
                                         let nextCoordinateValue = max(minValue, self.lastCoordinateValue + v.translation.width)
-                                        self.value = ((nextCoordinateValue - minValue) / scaleFactor) + lower
+                                        self.value = Double((nextCoordinateValue - minValue) / scaleFactor) + Double(lower)
                                     }
-                                    
                                 }
                         )
                     Spacer()

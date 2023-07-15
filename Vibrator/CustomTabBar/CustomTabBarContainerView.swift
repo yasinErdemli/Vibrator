@@ -15,10 +15,8 @@ struct CustomTabBarContainerView<Content: View>: View {
         ZStack(alignment: .bottom) {
             content
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-            CustomTabBarView(tabs: tabs, selection: $selection, localSelection: .vibration)
-                .ignoresSafeArea(edges: .bottom)
-                .offset(y: 4)
                 
+            CustomTabBarView(tabs: tabs, selection: $selection, localSelection: .vibration)
         }
         .ignoresSafeArea()
 //        .overlay(alignment: .bottom, content: {

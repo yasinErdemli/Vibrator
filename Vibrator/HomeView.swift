@@ -11,16 +11,14 @@ struct HomeView: View {
     @State private var showSheet: Bool = false
     var body: some View {
         ZStack {
-//            BackgroundView().ignoresSafeArea()
             WaveBackground().ignoresSafeArea()
             VStack(alignment: .leading, spacing: 30) {
-                Image("VibroRest")
-                    .resizable()
-                    .opacity(0.5)
-                    .frame(width: 164.5, height: 51.15, alignment: .center)
-                    .padding(.top, 25)
+                Text("VibroRest")
+                    .font(.system(size: 30, weight: .black))
+                    .kerning(-0.24)
+                    .foregroundStyle(.linearGradient(colors: [.white, Color(hue: 25/360, saturation: 1, brightness: 1), Color(hue: 302/360, saturation: 0.8, brightness: 0.6)], startPoint: .init(x: 0, y: -0.1), endPoint: .init(x: 0, y: 1)))
+                    .padding(.bottom, 30)
                 
-                Spacer()
                 
                 VStack(spacing: 20) {
                         ListItem(text: "Share Us", image: Image(systemName: "square.and.arrow.up"))
@@ -64,7 +62,8 @@ struct HomeView: View {
                 
 
             }
-            .padding()
+            .padding(.vertical, 20)
+            .padding(40)
             
             
         }
@@ -75,8 +74,9 @@ struct HomeView: View {
     }
     @ViewBuilder func ListItem(text: String, image: Image) -> some View {
         ZStack {
+            
             RoundedRectangle(cornerRadius: 10)
-                .foregroundStyle(Color("BackgroundColor").opacity(0.9) .shadow(.drop(color: Color("ShadowColor2").opacity(0.8), radius: 1, x: 1, y: 1)),.shadow(.drop(color: Color(hue: 247/360, saturation: 0.14, brightness: 0.68, opacity: 0.1), radius: 1, x: -1, y: -1)) )
+                .foregroundStyle(Color("BackgroundColor").opacity(0.95) .shadow(.drop(color: Color("ShadowColor2").opacity(0.8), radius: 1, x: 1, y: 1)),.shadow(.drop(color: Color(hue: 247/360, saturation: 0.14, brightness: 0.68, opacity: 0.1), radius: 1, x: -1, y: -1)) )
             HStack {
                 Text(text)
                     .foregroundColor(.white)
@@ -100,8 +100,10 @@ struct HomeView: View {
     
     @ViewBuilder func ListItemSmall(text: String, image: Image) -> some View {
         ZStack {
+           
+            
             RoundedRectangle(cornerRadius: 10)
-                .foregroundStyle(Color("BackgroundColor").opacity(0.9) .shadow(.drop(color: Color("ShadowColor2").opacity(0.8), radius: 1, x: 1, y: 1)),.shadow(.drop(color: Color(hue: 247/360, saturation: 0.14, brightness: 0.68, opacity: 0.1), radius: 1, x: -1, y: -1)) )
+                .foregroundStyle(Color("BackgroundColor").opacity(0.95) .shadow(.drop(color: Color("ShadowColor2").opacity(0.8), radius: 1, x: 1, y: 1)),.shadow(.drop(color: Color(hue: 247/360, saturation: 0.14, brightness: 0.68, opacity: 0.1), radius: 1, x: -1, y: -1)) )
             HStack {
                 Text(text)
                     .foregroundColor(.white)
