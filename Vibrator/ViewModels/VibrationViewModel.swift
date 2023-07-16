@@ -25,7 +25,8 @@ class VibrationViewModel: ObservableObject {
     }
     
     func createVibration() {
-        let item = try? hapticManager.createPattern()
+        vibrationPatternToPlay = nil
+        let item = try? hapticManager.createPattern(strength: vibration.strength, pattern: vibration.vibration, duration: vibration.duration, sampleRate: vibration.sampleRate)
         vibrationPatternToPlay = item
         
     }

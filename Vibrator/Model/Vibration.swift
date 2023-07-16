@@ -15,10 +15,10 @@ struct VibrationStruct {
     var strength: Strength
 }
 
-enum Strength: String, CustomStringConvertible, CaseIterable {
-    case light
-    case medium
-    case hard
+enum Strength: Int, CustomStringConvertible, CaseIterable {
+    case light = 0
+    case medium = 1
+    case hard = 2
     
     var description: String {
         switch self {
@@ -31,7 +31,6 @@ enum Strength: String, CustomStringConvertible, CaseIterable {
         }
     }
 }
-
 
 enum Vibration: CaseIterable {
     case fireplace, ocean, thunder, sunshine, moon, snow, tornado, sparkles, breeze
