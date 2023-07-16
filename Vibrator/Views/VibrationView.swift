@@ -6,44 +6,13 @@
 //
 
 import SwiftUI
-import CoreHaptics
 
-
-class VibrationViewModel: ObservableObject {
-    let hapticManager = Haptic.shared
-    @Published var vibration = VibrationStruct(vibration: .fireplace, duration: 10, sampleRate: 60, strength: .light)
-    @Published var vibrationPatternToPlay: CHHapticPattern?
-    @Published var showView: Bool = false
-    @Published var isPlaying: Bool = false
-    @Published var locked: Bool = false
-    @Published var showSheet: Bool = false
-    func prepareHaptics() {
-        hapticManager.prepareHaptics()
-    }
-    
-    init() {
-        createVibration()
-    }
-    
-    func createVibration() {
-        let item = try? hapticManager.createPattern()
-        vibrationPatternToPlay = item
-        
-    }
-    func playVibration() {
-        guard let pattern = vibrationPatternToPlay else { return }
-        hapticManager.play(pattern: pattern)
-    }
-    
-    func stopVibration() {
-        hapticManager.stopEngine()
-    }
-}
 struct VibrationView: View {
     @StateObject private var viewModel = VibrationViewModel()
     var body: some View {
         ZStack {
             WaveBackground().ignoresSafeArea()
+//            Color("BackgroundColor")
             VStack {
                 HStack {
                     Spacer()
@@ -76,11 +45,11 @@ struct VibrationView: View {
                                 
                                 Circle()
                                     .foregroundStyle(
-                                        Color("BackgroundColor").opacity(0.96).shadow(.drop(color: Color("ShadowColor2").opacity(0.76), radius: 8, x: 4, y: 4))
+                                        Color("BackgroundColor").opacity(0.96).shadow(.drop(color: Color("ShadowColor2").opacity(0.76), radius: 3, x: 4, y: 4))
                                             .shadow(.drop(color: .white.opacity(0.06), radius: 6, x: -4, y: -4))
                                     )
                                     .blur(radius: 0.5)
-                                    .frame(width: 124.72, height: 124.72)
+                                    .frame(width: 126)
                                 
                                 HStack(alignment: .center, spacing: 8) {
                                     RoundedRectangle(cornerRadius: 3)
@@ -100,8 +69,8 @@ struct VibrationView: View {
                                 Circle()
                                     .stroke(lineWidth: 31.2)
                                     .foregroundStyle(
-                                        Color("BackgroundColor").opacity(0.96).shadow(.drop(color: Color("ShadowColor"), radius: 6.4, x: 7, y: 7))
-                                            .shadow(.drop(color: .white.opacity(0.01), radius: 2, x: -3, y: -3))
+                                        Color("BackgroundColor").opacity(0.96).shadow(.drop(color: Color("ShadowColor"), radius: 6, x: 7, y: 7))
+                                            .shadow(.drop(color: .white.opacity(0.01), radius: 0.5, x: -3, y: -3))
                                     )
                                     .blur(radius: 0.5)
                                     .scaledToFill()
@@ -109,11 +78,11 @@ struct VibrationView: View {
                                 
                                 Circle()
                                     .foregroundStyle(
-                                        Color("BackgroundColor").opacity(0.96).shadow(.inner(color: Color("ShadowColor2").opacity(0.76), radius: 4.8, x: 7, y: 7))
-                                            .shadow(.inner(color: .white.opacity(0.06), radius: 3.6, x: -3, y: -3))
+                                        Color("BackgroundColor").opacity(0.96).shadow(.inner(color: Color("ShadowColor2").opacity(0.76), radius: 2, x: 7, y: 7))
+                                            .shadow(.inner(color: .white.opacity(0.06), radius: 2, x: -3, y: -3))
                                     )
                                     .blur(radius: 0.5)
-                                    .frame(width: 124.72, height: 124.72)
+                                    .frame(width: 126)
                                 
                                 Image(systemName: "play.fill")
                                     .resizable()
@@ -189,12 +158,6 @@ struct VibrationView_Previews: PreviewProvider {
     }
 }
 
-struct VibrationStruct {
-    var vibration: Vibration
-    var duration: Double
-    var sampleRate: Double
-    var strength: Strength
-}
 
 
 

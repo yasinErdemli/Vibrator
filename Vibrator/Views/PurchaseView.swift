@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PurchaseView: View {
     @Binding var showView: Bool
-    @State var frameWidth: CGFloat = 200
     var body: some View {
         ZStack {
             WaveBackground().ignoresSafeArea()

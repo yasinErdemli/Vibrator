@@ -16,7 +16,7 @@ struct CustomSliderView: View {
         GeometryReader { gr in
             let thumbSize = gr.size.height * 0.3
             let minValue = gr.size.width * 0.015
-            let maxValue = gr.size.width * 0.98 - thumbSize - 20 // Subtract thumb size and padding
+            let maxValue = gr.size.width * 0.98 - thumbSize - 19 // Subtract thumb size and padding
             
             let scaleFactor = (maxValue - minValue) / CGFloat(sliderRange.upperBound - sliderRange.lowerBound)
             let lower = CGFloat(sliderRange.lowerBound)
@@ -24,11 +24,11 @@ struct CustomSliderView: View {
             
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
-                    .foregroundStyle(Color(hue: 249/360, saturation: 0.45, brightness: 0.13, opacity: 0.8).gradient.shadow(.drop(color: Color(hue: 247/360, saturation: 0.47, brightness: 0.1, opacity: 1), radius: 7.5, x: 3, y: 3)),.shadow(.drop(color: .white.opacity(0.9), radius: 0.8, x: -1, y: -1)))
+                    .foregroundStyle(Color(hue: 249/360, saturation: 0.45, brightness: 0.13, opacity: 0.8).gradient.shadow(.drop(color: Color(hue: 247/360, saturation: 0.47, brightness: 0.1, opacity: 1), radius: 2.5, x: 3, y: 3)),.shadow(.drop(color: .white.opacity(0.9), radius: 0.8, x: -1, y: -1)))
                     .frame(height: 30.7)
                 
                 RoundedRectangle(cornerRadius: 10)
-                    .foregroundStyle(Color(hue: 249/360, saturation: 0.45, brightness: 0.13, opacity: 0.8).gradient.shadow(.inner(color: Color(hue: 247/360, saturation: 0.49, brightness: 0.11, opacity: 1), radius: 12, x: 3, y: 3)),.shadow(.inner(color: .white.opacity(0.12), radius: 5, x: -3, y: -3)))
+                    .foregroundStyle(Color(hue: 249/360, saturation: 0.45, brightness: 0.13, opacity: 0.8).gradient.shadow(.inner(color: Color(hue: 247/360, saturation: 0.49, brightness: 0.11, opacity: 1), radius: 1.2, x: 3, y: 3)) .shadow(.inner(color: .white.opacity(0.12), radius: 1.5, x: -3, y: -3)))
                     .frame(height: 23.32)
                     .padding(.horizontal, 3)
                 
@@ -43,7 +43,7 @@ struct CustomSliderView: View {
                 
                 HStack {
                     Circle()
-                        .foregroundStyle(Color(hue: 25/360, saturation: 1, brightness: 1).shadow(.drop(color: .black.opacity(0.25), radius: 1, x: 2, y: 0)) .shadow(.inner(color: Color(hue: 25/360, saturation: 0.97, brightness: 0.56, opacity: 0.54), radius: 1, x: -2, y: -2)), .shadow(.inner(color: .white.opacity(0.26), radius: 0.7, x: -2, y: -2)))
+                        .foregroundStyle(Color(hue: 25/360, saturation: 1, brightness: 1).shadow(.drop(color: .black.opacity(0.25), radius: 1, x: 2, y: 0)) .shadow(.inner(color: Color(hue: 25/360, saturation: 0.97, brightness: 0.56, opacity: 0.54), radius: 0.1, x: -2, y: -2)), .shadow(.inner(color: .white.opacity(0.26), radius: 0.3, x: -2, y: -2)))
                         .frame(height: 20.72)
                         .offset(x: CGFloat(min(max(minValue, sliderVal), maxValue)))
                         .gesture(

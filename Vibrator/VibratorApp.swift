@@ -11,9 +11,6 @@ import SwiftUI
 struct VibratorApp: App {
     var body: some Scene {
         WindowGroup {
-            //            ContentView()
-            //                .environmentObject(envObject)
-            //        }
             TabBarView(tabSelection: .vibration)
                 .preferredColorScheme(.dark)
         }

@@ -22,6 +22,8 @@
 		7DD67A052A4484CB00FE714C /* CoreHaptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD67A042A4484CB00FE714C /* CoreHaptics.swift */; };
 		7DD67A072A450EC200FE714C /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD67A062A450EC200FE714C /* PurchaseView.swift */; };
 		7DD67A0B2A45272500FE714C /* ShimmerEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD67A0A2A45272500FE714C /* ShimmerEffect.swift */; };
+		7DE8D6192A644C4700FE208D /* VibrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE8D6182A644C4700FE208D /* VibrationViewModel.swift */; };
+		7DE8D61C2A644CAD00FE208D /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE8D61B2A644CAD00FE208D /* Vibration.swift */; };
 		7DF39AE72A453A7800DAF1E0 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF39AE62A453A7800DAF1E0 /* MainTabView.swift */; };
 		7DF39AE92A453CC400DAF1E0 /* VibrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF39AE82A453CC400DAF1E0 /* VibrationView.swift */; };
 		7DF39AEF2A454B8F00DAF1E0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF39AEE2A454B8F00DAF1E0 /* HomeView.swift */; };
@@ -44,6 +46,8 @@
 		7DD67A042A4484CB00FE714C /* CoreHaptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreHaptics.swift; sourceTree = "<group>"; };
 		7DD67A062A450EC200FE714C /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		7DD67A0A2A45272500FE714C /* ShimmerEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffect.swift; sourceTree = "<group>"; };
+		7DE8D6182A644C4700FE208D /* VibrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationViewModel.swift; sourceTree = "<group>"; };
+		7DE8D61B2A644CAD00FE208D /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
 		7DF39AE62A453A7800DAF1E0 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		7DF39AE82A453CC400DAF1E0 /* VibrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationView.swift; sourceTree = "<group>"; };
 		7DF39AEE2A454B8F00DAF1E0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -93,11 +97,9 @@
 			children = (
 				7DD679F42A44847C00FE714C /* VibratorApp.swift */,
 				7DD679F62A44847C00FE714C /* ContentView.swift */,
-				7DF39AE62A453A7800DAF1E0 /* MainTabView.swift */,
-				7DD67A062A450EC200FE714C /* PurchaseView.swift */,
-				7DF39AEE2A454B8F00DAF1E0 /* HomeView.swift */,
-				7DF39AE82A453CC400DAF1E0 /* VibrationView.swift */,
-				7D08460C2A4E149100B3BCE9 /* PreferencesView.swift */,
+				7DE8D61A2A644C6E00FE208D /* Model */,
+				7DE8D6162A644BD100FE208D /* Views */,
+				7DE8D6172A644C3400FE208D /* ViewModels */,
 				7DF39AEC2A454B4A00DAF1E0 /* HelperViews */,
 				7DF39AED2A454B5F00DAF1E0 /* Utilities */,
 				7D54AFF72A4B5B8F0032D200 /* CustomTabBar */,
@@ -113,6 +115,34 @@
 				7DD679FB2A44847E00FE714C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7DE8D6162A644BD100FE208D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7DF39AE62A453A7800DAF1E0 /* MainTabView.swift */,
+				7DF39AE82A453CC400DAF1E0 /* VibrationView.swift */,
+				7DF39AEE2A454B8F00DAF1E0 /* HomeView.swift */,
+				7DD67A062A450EC200FE714C /* PurchaseView.swift */,
+				7D08460C2A4E149100B3BCE9 /* PreferencesView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7DE8D6172A644C3400FE208D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7DE8D6182A644C4700FE208D /* VibrationViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7DE8D61A2A644C6E00FE208D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7DE8D61B2A644CAD00FE208D /* Vibration.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7DF39AEC2A454B4A00DAF1E0 /* HelperViews */ = {
@@ -212,12 +242,14 @@
 				7DD679F72A44847C00FE714C /* ContentView.swift in Sources */,
 				7D54AFFD2A4B5B900032D200 /* TabBarItem.swift in Sources */,
 				7DD67A072A450EC200FE714C /* PurchaseView.swift in Sources */,
+				7DE8D61C2A644CAD00FE208D /* Vibration.swift in Sources */,
 				7D54B0032A4B6FB50032D200 /* WaveAnimation.swift in Sources */,
 				7D2F91C42A4F045000641221 /* CustomSliderView.swift in Sources */,
 				7D08460D2A4E149100B3BCE9 /* PreferencesView.swift in Sources */,
 				7DF39AE72A453A7800DAF1E0 /* MainTabView.swift in Sources */,
 				7DD67A0B2A45272500FE714C /* ShimmerEffect.swift in Sources */,
 				7DD679F52A44847C00FE714C /* VibratorApp.swift in Sources */,
+				7DE8D6192A644C4700FE208D /* VibrationViewModel.swift in Sources */,
 				7DF39AE92A453CC400DAF1E0 /* VibrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

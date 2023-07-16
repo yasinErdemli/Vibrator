@@ -145,21 +145,5 @@ struct PreferencesView_Previews: PreviewProvider {
     }
 }
 
-enum Strength: String, CustomStringConvertible, CaseIterable {
-    case light
-    case medium
-    case hard
-    
-    var description: String {
-        switch self {
-        case .light:
-            return "Light"
-        case .medium:
-            return "Medium"
-        case .hard:
-            return "Hard"
-        }
-    }
-}
 
 
